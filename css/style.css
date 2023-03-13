@@ -544,23 +544,35 @@ nav ul a::after {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
+.-mt-6 {
+  margin-top: -1.5rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .mb-7 {
   margin-bottom: 1.75rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
 }
-.-mt-1 {
-  margin-top: -0.25rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
-.-mt-6 {
-  margin-top: -1.5rem;
+.mt-8 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
 }
 .block {
   display: block;
@@ -592,8 +604,11 @@ nav ul a::after {
 .cursor-pointer {
   cursor: pointer;
 }
-.grid-cols-\[repeat\(auto-fit\2c _minmax\(280px\2c _1fr\)\)\] {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.grid-cols-footer {
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+}
+.grid-cols-fourResponsive {
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -604,8 +619,14 @@ nav ul a::after {
 .justify-start {
   justify-content: flex-start;
 }
+.justify-center {
+  justify-content: center;
+}
 .justify-between {
   justify-content: space-between;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .gap-5 {
   gap: 1.25rem;
@@ -624,6 +645,10 @@ nav ul a::after {
 }
 .rounded-md {
   border-radius: 0.375rem;
+}
+.bg-DarkBlue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(233 26% 24% / var(--tw-bg-opacity));
 }
 .bg-LightGrayishBlue {
   --tw-bg-opacity: 1;
@@ -660,6 +685,15 @@ nav ul a::after {
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
+.fill-GrayishBlue {
+  fill: hsl(233, 8%, 62%);
+}
+.fill-white {
+  fill: #fff;
+}
+.fill-LimeGreen {
+  fill: hsl(136, 65%, 51%);
+}
 .p-5 {
   padding: 1.25rem;
 }
@@ -670,6 +704,10 @@ nav ul a::after {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -683,12 +721,15 @@ nav ul a::after {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .pb-20 {
   padding-bottom: 5rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
 }
 .text-center {
   text-align: center;
@@ -712,17 +753,22 @@ nav ul a::after {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.font-bold {
+  font-weight: 700;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.font-semibold {
+  font-weight: 600;
+}
+.font-\[400\] {
+  font-weight: 400;
 }
 .leading-relaxed {
   line-height: 1.625;
@@ -743,6 +789,17 @@ nav ul a::after {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-LimeGreen {
+  --tw-text-opacity: 1;
+  color: hsl(136 65% 51% / var(--tw-text-opacity));
+}
+.text-BrightCyan {
+  --tw-text-opacity: 1;
+  color: hsl(192 70% 51% / var(--tw-text-opacity));
+}
+.opacity-80 {
+  opacity: 0.8;
+}
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -750,6 +807,10 @@ nav ul a::after {
 }
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.hover\:fill-LimeGreen:hover {
+  fill: hsl(136, 65%, 51%);
 }
 
 .hover\:text-DarkBlue:hover {
@@ -780,6 +841,10 @@ nav ul a::after {
 
 @media (min-width: 768px) {
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -790,6 +855,10 @@ nav ul a::after {
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 
   .md\:text-2xl {
@@ -814,6 +883,14 @@ nav ul a::after {
 
   .lg\:-top-32 {
     top: -8rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:flex {
@@ -844,6 +921,14 @@ nav ul a::after {
     align-items: center;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .lg\:bg-desk {
     background-image: url(../images/bg-intro-desktop.svg);
   }
@@ -858,6 +943,10 @@ nav ul a::after {
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-right {
+    text-align: right;
   }
 
   .lg\:text-5xl {
