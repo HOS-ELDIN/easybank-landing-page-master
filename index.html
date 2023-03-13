@@ -22,7 +22,7 @@
 		/>
 	</head>
 	<body class="font-serif bg-VeryLightGray">
-		<header class="bg-white h-14 z-10 sticky">
+		<header class="bg-white h-14 z-10 relative">
 			<div
 				class="container px-5 mx-auto h-full flex justify-between items-center"
 			>
@@ -31,39 +31,42 @@
 						<img src="images/logo.svg" alt="" />
 					</a>
 				</div>
-				<nav class="hidden md:block">
-					<ul class="flex gap-5">
+				<!-- add hidden to nav after finish -->
+				<nav
+					class="absolute hidden bg-white top-[4.25rem] left-1/2 -translate-x-1/2 w-11/12 text-center rounded-md md:w-auto md:translate-x-0 md:block md:static"
+				>
+					<ul class="md:flex md:gap-5">
 						<li>
 							<a
-								class="active relative text-GrayishBlue  hover:text-DarkBlue py-4 block hover:after:block transition-all duration-300"
+								class="active relative text-DarkBlue md:text-GrayishBlue hover:text-DarkBlue py-4 block md:hover:after:block transition-all duration-300 before:hidden md:before:block"
 								href="#"
 								>Home</a
 							>
 						</li>
 						<li>
 							<a
-              class="relative text-GrayishBlue  hover:text-DarkBlue py-4 block hover:after:block transition-all duration-300"
+								class="relative text-DarkBlue md:text-GrayishBlue hover:text-DarkBlue py-4 block md:hover:after:block transition-all duration-300 before:hidden md:before:block"
 								href="#about"
 								>About</a
 							>
 						</li>
 						<li>
 							<a
-								class="relative text-GrayishBlue  hover:text-DarkBlue py-4 block hover:after:block transition-all duration-300"
+								class="relative text-DarkBlue md:text-GrayishBlue hover:text-DarkBlue py-4 block md:hover:after:block transition-all duration-300 before:hidden md:before:block"
 								href="#contact"
 								>Contact</a
 							>
 						</li>
 						<li>
 							<a
-								class="relative text-GrayishBlue  hover:text-DarkBlue py-4 block hover:after:block transition-all duration-300"
+								class="relative text-DarkBlue md:text-GrayishBlue hover:text-DarkBlue py-4 block md:hover:after:block transition-all duration-300 before:hidden md:before:block"
 								href="#blog"
 								>Blog</a
 							>
 						</li>
 						<li>
 							<a
-								class="relative text-GrayishBlue  hover:text-DarkBlue py-4 block hover:after:block transition-all duration-300"
+								class="relative text-DarkBlue md:text-GrayishBlue hover:text-DarkBlue py-4 block md:hover:after:block transition-all duration-300 before:hidden md:before:block"
 								href="#careers"
 								>Careers</a
 							>
@@ -77,8 +80,18 @@
 						Request Invite
 					</button>
 				</div>
-				<img id="burger" class="md:hidden" src="images/icon-hamburger.svg" alt="" />
-				<img id="close" class="hidden md:hidden" src="images/icon-close.svg" alt="" />
+				<img
+					id="burger"
+					class="md:hidden"
+					src="images/icon-hamburger.svg"
+					alt=""
+				/>
+				<img
+					id="close"
+					class="hidden md:hidden"
+					src="images/icon-close.svg"
+					alt=""
+				/>
 			</div>
 		</header>
 
@@ -271,8 +284,8 @@
 			>
 				<div class="flex flex-col gap-5 lg:justify-between">
 					<a href="#">
-            <img class="mx-auto" src="images/logo-dark.svg" alt="" />
-          </a>
+						<img class="mx-auto" src="images/logo-dark.svg" alt="" />
+					</a>
 					<div class="flex gap-5 justify-center">
 						<svg
 							class="fill-white transition-all duration-300 hover:fill-LimeGreen cursor-pointer"
@@ -328,14 +341,26 @@
 					</div>
 				</div>
 				<ul class="flex flex-col gap-3 lg:text-left mt-4 lg:mt-0">
-					<li class="transition-all duration-300 hover:text-LimeGreen"><a href="#">About Us</a></li>
-					<li class="transition-all duration-300 hover:text-LimeGreen"><a href="">Contact</a></li>
-					<li class="transition-all duration-300 hover:text-LimeGreen"><a href="">Blog</a></li>
+					<li class="transition-all duration-300 hover:text-LimeGreen">
+						<a href="#">About Us</a>
+					</li>
+					<li class="transition-all duration-300 hover:text-LimeGreen">
+						<a href="">Contact</a>
+					</li>
+					<li class="transition-all duration-300 hover:text-LimeGreen">
+						<a href="">Blog</a>
+					</li>
 				</ul>
 				<ul class="flex flex-col gap-3 lg:text-left mb-4 lg:mb-0">
-					<li class="transition-all duration-300 hover:text-LimeGreen"><a href="#">Careers</a></li>
-					<li class="transition-all duration-300 hover:text-LimeGreen"><a href="">Support</a></li>
-					<li class="transition-all duration-300 hover:text-LimeGreen"><a href="">Privacy Policy</a></li>
+					<li class="transition-all duration-300 hover:text-LimeGreen">
+						<a href="#">Careers</a>
+					</li>
+					<li class="transition-all duration-300 hover:text-LimeGreen">
+						<a href="">Support</a>
+					</li>
+					<li class="transition-all duration-300 hover:text-LimeGreen">
+						<a href="">Privacy Policy</a>
+					</li>
 				</ul>
 				<div class="lg:text-right">
 					<button
