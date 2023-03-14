@@ -20,7 +20,8 @@ module.exports = {
 				VeryLightGray: "hsl(0, 0%, 98%)", //bright section bg
 				White: "hsl(0, 0%, 100%)",
 
-				"-atribution": "hsl(228, 45%, 44%)",
+
+				gradStart:"#2b324c"
 			},
 			backgroundImage: {
 				desk: "url(../images/bg-intro-desktop.svg)",

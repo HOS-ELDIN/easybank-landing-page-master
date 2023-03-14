@@ -1,8 +1,10 @@
 let nav = document.querySelectorAll("nav ul a");
 let burger = document.getElementById("burger");
 let closeMenu = document.getElementById("close");
-let navMenu = document.querySelector("nav")
+let navMenu = document.querySelector("nav");
+let navBg = document.querySelector(".nav-bg");
 
+// add active state
 nav.forEach((a) => {
 	a.addEventListener("click", () => {
 		nav.forEach((link) => {
@@ -12,23 +14,30 @@ nav.forEach((a) => {
 	});
 });
 
+//burger icon clicking
 burger.onclick = () => {
-	burger.classList.toggle("hidden");
-	closeMenu.classList.toggle("hidden");
-	navMenu.classList.remove("hidden")
-};
-closeMenu.onclick = () => {
-	burger.classList.toggle("hidden");
-	closeMenu.classList.toggle("hidden");
-	navMenu.classList.add("hidden")
+	burger.classList.add("hidden");
+	closeMenu.classList.remove("hidden");
+	navMenu.classList.remove("hidden");
+	navBg.classList.remove("hidden");
 };
 
+//close icon clicking
+closeMenu.onclick = () => {
+	burger.classList.remove("hidden");
+	closeMenu.classList.add("hidden");
+	navMenu.classList.add("hidden");
+	navBg.classList.add("hidden");
+};
+
+// close nav menu if a link clicked
 nav.forEach((a) => {
 	a.addEventListener("click", () => {
-		closeMenu.classList.add("hidden");
-		if (navMenu.classList.contains("hidden") == false) {
-			burger.classList.remove("hidden")
-			navMenu.classList.add("hidden")
-		}
+		closeMenu.click();
 	});
 });
+
+// close nav menu if clicked out side nav
+navBg.onclick = () => {
+	closeMenu.click();
+};
