@@ -30,14 +30,9 @@ closeMenu.onclick = () => {
 	navBg.classList.add("hidden");
 };
 
-// close nav menu if a link clicked
-nav.forEach((a) => {
-	a.addEventListener("click", () => {
+// close nav menu if a link clicked or clicked out side nav
+document.onclick = (e) => {
+	if (e.target.id != "burger") {
 		closeMenu.click();
-	});
-});
-
-// close nav menu if clicked out side nav
-navBg.onclick = () => {
-	closeMenu.click();
+	}
 };
