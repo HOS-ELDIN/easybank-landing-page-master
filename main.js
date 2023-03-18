@@ -1,13 +1,13 @@
-let nav = document.querySelectorAll("nav ul a");
+let navLinks = document.querySelectorAll("nav ul a");
 let burger = document.getElementById("burger");
 let closeMenu = document.getElementById("close");
 let navMenu = document.querySelector("nav");
 let navBg = document.querySelector(".nav-bg");
 
 // add active state
-nav.forEach((a) => {
+navLinks.forEach((a) => {
 	a.addEventListener("click", () => {
-		nav.forEach((link) => {
+		navLinks.forEach((link) => {
 			link.classList.remove("active");
 		});
 		a.classList.add("active");
